@@ -1,0 +1,50 @@
+{
+    "totals": {
+      "expense": "₹14500",
+      "income": "₹150000",
+      "total": "₹135500"
+    },
+    "transactions": [
+      {
+        "date": "Jun 26, Wednesday",
+        "items": [
+          {
+            "title": "Clothing",
+            "type": "Card",
+            "amount": "-₹2000",
+            "className": "expense"
+          }
+        ]
+      },
+      {
+        "date": "Jun 17, Monday",
+        "items": [
+          {
+            "title": "Bills",
+            "type": "Cash",
+            "amount": "-₹10000",
+            "className": "expense"
+          },
+          {
+            "title": "Entertainment",
+            "type": "Cash",
+            "amount": "-₹2000",
+            "className": "expense"
+          },
+          {
+            "title": "Salary",
+            "type": "Card",
+            "amount": "+₹150000",
+            "className": "income"
+          },
+          {
+            "title": "Food",
+            "type": "Cash",
+            "amount": "-₹2000",
+            "className": "expense"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,27 @@
+[
+    {
+      "month": "Jun",
+      "year": 2024,
+      "items": [
+        { "name": "Bills", "limit": 7000, "spend": 6000 },
+        { "name": "Clothes", "limit": 4000, "spend": 8000 },
+        { "name": "Groceries", "limit": 4000, "spend": 10000 }
+      ]
+    },
+    {
+      "month": "May",
+      "year": 2024,
+      "items": [
+        { "name": "Clothes", "limit": 4000, "spend": 8000 },
+        { "name": "Groceries", "limit": 4000, "spend": 10000 }
+      ]
+    },
+    {
+      "month": "Apr",
+      "year": 2024,
+      "items": [
+        { "name": "Bills", "limit": 3000, "spend": 10000 }
+      ]
+    }
+  ]
+  

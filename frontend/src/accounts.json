@@ -1,0 +1,22 @@
+{
+    "overall": {
+      "expense": 14500,
+      "income": 150000,
+      "balance": 135500
+    },
+    "accounts": [
+      {
+        "type": "CARD",
+        "balance": 148000
+      },
+      {
+        "type": "CASH",
+        "balance": -12500
+      },
+      {
+        "type": "SAVINGS",
+        "balance": 148000
+      }
+    ]
+  }
+  

@@ -1,0 +1,1484 @@
+/*Home CSS*/
+* {
+  box-sizing: border-box;
+}
+
+.inria-serif-regular {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Home Navbar CSS*/
+.header {
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(255, 123, 0, 1), rgba(1, 0, 141, 1));
+  padding: 10px 20px;
+  color: white;
+}
+
+.header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo h1 {
+  position: relative;
+  left: 35px;
+  color: white;
+  font-size: 25px;
+  margin: 0;
+}
+
+.logo img {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.nav a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav .sign-in {
+  background-color: #ff7a3d;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+.sign-in:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/*Home Hero CSS*/
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px 20px;
+  /* gap: 20px; */
+}
+
+.phone-screen {
+  padding: 10px;
+  position: relative;
+}
+
+.phone-screen .app-name {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.phone-screen .app-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-screen .app-illustration img {
+  max-width: 300px;
+  border-radius: 20px;
+}
+
+.content {
+  max-width: 500px;
+  /* margin-left: 250px; */
+}
+
+.content h1 {
+  font-family: "Inria Serif", serif;
+  font-size: 4rem;
+  color: #4c23a0;
+}
+
+.content p {
+  font-family: "Inria Serif", serif;
+  color: #ff7a3d;
+  font-size: 2em;
+}
+
+.content h1:before {
+  content: '\201C';
+}
+
+.content h1:after {
+  content: '\201D';
+}
+
+/*SignIn CSS*/
+.signin-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signin-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signin-form .form-group {
+  margin-bottom: 15px;
+  margin-right:15px;
+}
+
+.signin-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signin-form .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signin-form .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.signin-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4c23a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Records CSS*/
+/* Dashboard container styles */
+.dashboard-container {
+  display: flex;
+  height: 91vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.parent-header {
+  display: flex;
+  border-bottom: 2px solid #f0f0f0;
+  background-color: #E9F6FF;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background-color: #edf2fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Start sidebar hidden on the left */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 15;
+}
+
+/* When open, move sidebar into view */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* When closed, slide back */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #d1e7ff;
+  color: #0056b3;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.nav-link .icon {
+  margin-right: 10px;
+}
+
+.nav-link .icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Main wrapper styles */
+.main-wrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.main-wrapper.expanded .main-content {
+  margin-left: 0; /* Remove margin when sidebar is closed */
+}
+
+.toggle-wrapper {
+  /* padding-top: 0.25rem; */
+  width: 50px; /* Adjust width for toggle button space */
+  display: flex;
+  align-items: flex-start; /* Align at the top */
+  justify-content: center;
+  position: relative;
+}
+
+.custom-datepicker {
+  font-family: "Acme", sans-serif; 
+  background-color:#3285ce;
+}
+
+.nav-toggle-btn {
+  position: relative; /* Position absolute within the wrapper */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 8px 4px 8px; /* Optional: Add padding for better click area */
+  background-color: transparent; /* Optional: Change background color if needed */
+}
+
+.nav-toggle-btn img {
+  width: 40px;
+}
+
+/* Main content styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  /* padding-left: 50px;  */
+  background-color: #fff;
+}
+
+.main-content.full-width {
+  margin-left: 0;
+}
+
+.main-content h2  {
+  margin: 0;
+}
+
+.dashboard-header {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* border-bottom: 2px solid #f0f0f0;
+  background-color: #E9F6FF; */
+}
+
+/* .header-title {
+  display: flex;
+  align-items: center;
+} */
+
+.header-title input[type="month"] {
+  /* Apply your desired styles here */
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 150px;
+  /* background-image: linear-gradient(to right, rgba(255, 123, 0, 1), rgba(1, 0, 141, 1));
+  color: white; */
+  border-radius: 3px;
+}
+
+/* WebKit browsers (Chrome, Safari) */
+/* ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+} */
+
+.nav-arrow {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.header-title h2 {
+  font-family: "Acme", sans-serif;
+}
+
+.header-totals {
+  display: flex;
+  align-items: center;
+  font-family: "Acme", sans-serif;
+}
+
+.total-item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.total-item p {
+  margin: 0;
+}
+
+.amount {
+  font-weight: bold;
+}
+
+.expense {
+  color: red;
+}
+
+.income {
+  color: green;
+}
+
+.total {
+  color: #333;
+}
+
+.transaction-list {
+  margin-top: 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+.transaction-group {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.transaction-date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff7300;
+  text-align: left;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  /* border-bottom: 1px solid #ccc; */
+  text-align: left;
+  width: 10%;
+}
+
+tr:nth-child(even) {
+  background-color: #E9F6FF;
+}
+
+.transaction:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.transaction-title {
+  width: 30%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.transaction-type {
+  text-align: center;
+  color: #585858;
+  font-size: 18px;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  text-align: right;
+  font-size: 18px;
+}
+
+.transaction-amount.expense {
+  color: red;
+}
+
+.transaction-amount.income {
+  color: green;
+}
+
+.add-transaction-btn, .add-budget-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0056b3;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*Records Pop up css*/
+/* Pop-up styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-height: 95vh;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup-close {
+  background-color: #d1e7ff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: red;
+}
+
+.popup-save {
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: white;
+}
+
+.popup-delete {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: white;
+}
+
+.popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* 
+.add-transaction-type {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.transaction-type-btn {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.transaction-type-btn.active {
+  background-color: #007bff;
+  color: white;
+} */
+.add-transaction-type {
+  display: flex;
+  gap: 10px; /* Spacing between items */
+}
+
+.add-transaction-type > * {
+  flex: 1; /* Equal width for all children */
+  text-align: center; /* Optional: Center text within each child */
+}
+
+.transaction-type-radio {
+  display: none; /* Hide the actual radio button */
+}
+
+.transaction-type-btn {
+  flex: 1;
+  font-size: 0.9rem;
+  /* padding: 1rem; */
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.transaction-type-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-transaction-type label {
+  flex: 1; /* Make each label take equal width */
+  display: flex;
+  align-items: center;
+}
+.input-group-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group-wrapper .input-group{
+  width: 45%;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.75rem;
+  align-self: center;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  padding: 5px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+}
+
+.input-group #category, 
+.input-group #account,
+.input-group #transaction_date,
+.input-group #transaction_time {
+  height: 1.75rem;
+  font-size: 0.8rem;
+}
+.calculator-display div {
+  display: flex; 
+  align-items: center; 
+  height: 4rem; 
+}
+
+.calculator-display {
+  height: 6rem;
+  padding: 5px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  text-align: right;
+  background-color: #e0e0e0;
+}
+
+.calculator-display label{
+  font-size: 1rem;
+  align-self: flex-end;
+}
+
+.calculator-display-input {
+  align-self: flex-start;
+  max-width: 92%;
+  font-size: 2.75rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  text-align: right;
+  background-color: #e0e0e0;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.calculator button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.calculator button.number {
+  background-color: #007bff;
+  color: white;
+}
+
+.calculator button.operation {
+  background-color: #ff7300;
+  color: white;
+}
+
+.calculator button.equal {
+  background-color: #28a745;
+  color: white;
+}
+
+.calculator button.clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+/*Analysis CSS*/
+
+.expense-overview {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.flexer{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chart-container {
+  width: 250px;
+  height: 200px;  /* Set a fixed height for the chart */
+  margin: 0;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.legend-color.bills {
+  background-color: #ff0000;
+}
+
+.legend-color.clothing {
+  background-color: #ffd700;
+}
+
+.legend-color.entertainment {
+  background-color: #800080;
+}
+
+.legend-color.food {
+  background-color: #008000;
+}
+
+.expense-bars {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.expense-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bar-label {
+  width: 100px;
+}
+
+.bar {
+  flex: 1;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 10px;
+  height: 20px;
+}
+
+.fill {
+  height: 100%;
+}
+
+.fill.bills {
+  background-color: #ff0000;
+}
+
+.fill.clothing {
+  background-color: #ffd700;
+}
+
+.fill.entertainment {
+  background-color: #800080;
+}
+
+.fill.food {
+  background-color: #008000;
+}
+
+.bar-percentage {
+  width: 50px;
+  text-align: right;
+}
+
+.toggle-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.toggle-buttons button.active {
+  background-color: #3285ce;
+  color: white;
+}
+
+.toggle-buttons button:hover {
+  background-color: #ddd;
+}
+
+
+/*Budget CSS*/
+/* .budgeted-categories {
+  width: 100%;
+}
+
+.category {
+  background-color: #fafafa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.category h3 {
+  margin: 10px 0px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.progress-bar-container {
+  position: relative;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.limit-label {
+  background-color: #fca;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.limit-exceeded {
+  color: red;
+  text-align: right;
+  font-size: 0.9em;
+} */
+
+
+/*Budget CSS*/
+
+
+/* 
+.progress-bar-container {
+  position: relative;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.5s;
+}
+
+.progress-bar-red {
+  background-color: red;
+}
+
+.progress-bar-green {
+  background-color: green;
+}
+
+.limit-label {
+  
+}
+
+.label-red {
+  color: red;
+}
+
+.label-green {
+  color: green;
+} */
+.budgeted-categories {
+  margin-top: 20px;
+}
+
+.category {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.category:hover {
+  background-color: #f9f9f9;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.progress-bar-container {
+  position: relative;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.progress-bar-green {
+  background-color: green;
+}
+
+.progress-bar-red {
+  background-color: red;
+}
+
+/* .limit-label {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+} */
+.limit-label {
+  background-color: #fca;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.label-green {
+  color: green;
+}
+
+.label-red {
+  color: red;
+}
+
+/* .limit-exceeded {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+} */
+.limit-exceeded {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: right;
+  font-size: 0.9em;
+}
+/* .add-budget-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: #3285ce;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+} */
+
+.add-budget-btn:hover {
+  background-color: #286bac;
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.popup-content form div {
+  margin-bottom: 15px;
+}
+
+.popup-content form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.popup-content form select {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup-content form input {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup-content form button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3285ce;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content form button:hover {
+  background-color: #286bac;
+}
+
+/*Account CSS*/
+.account-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.account-container h2{
+  margin: 0 0 0.75rem 0;
+}
+
+.overall {
+  background-color: #e6f2ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.expense-income {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+}
+
+.value {
+  font-size: 1.5em;
+}
+
+.expense {
+  color: red;
+}
+
+.income {
+  color: green;
+}
+
+.total-balance {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.accounts {
+  margin-bottom: 20px;
+}
+
+.account {
+  background-color: #e6f2ff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-type {
+  font-weight: bold;
+}
+
+.account-balance {
+  font-weight: bold;
+}
+
+.account-balance.negative {
+  color: red;
+}
+
+.add-account {
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Categories CSS*/
+.category-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.income-categories, .expense-categories {
+  margin-bottom: 20px;
+}
+
+.income-categories h2 {
+  color: orange;
+}
+
+.expense-categories h2 {
+  color: purple;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.category-item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-category {
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  .header-totals > div:first-child {
+    display: none;
+  }
+  /* Header adjustments */
+  .header {
+    height: 8vh;
+    padding: 8px 15px;
+  }
+  
+  .logo h1 {
+    left: 15px;
+    font-size: 20px;
+  }
+  
+  .nav {
+    gap: 20px;
+  }
+  
+  .nav a {
+    font-size: 16px;
+  }
+  
+  .nav .sign-in {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .nav-toggle-btn {
+    font-size: 30px;
+    padding: 25px 8px 4px 8px; /* Optional: Add padding for better click area */
+  }
+  
+  .nav-toggle-btn img {
+    width: 40px;
+  }
+  /* Home hero section */
+  .main {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 20px;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .content p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .phone-screen .app-illustration img {
+    max-width: 250px;
+  }
+
+  /* Dashboard adjustments */
+  .dashboard-container {
+    height: 92vh;
+  }
+  
+  .main-content {
+    padding: 15px;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    gap: 5px;
+  }
+  
+  .header-title {
+    height: 1.3rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-title input[type="month"] {
+    width: 140px;
+  }
+  
+  .header-totals {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .total-item {
+    margin-left: 0;
+    min-width: 70px;
+    flex: 1;
+  }
+  
+  .selected-month {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Transaction list mobile */
+  .transaction-list {
+    margin-top: 15px;
+  }
+  
+  .transaction-group {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .transaction-date {
+    font-size: 16px;
+    padding: 8px 5px;
+  }
+  
+  th, td {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+  
+  .transaction-title {
+    width: 40%;
+    font-size: 14px;
+  }
+  
+  .transaction-type {
+    font-size: 12px;
+    width: 25%;
+  }
+  
+  .transaction-amount {
+    font-size: 14px;
+    width: 25%;
+  }
+  
+  .transaction-time {
+    width: 10%;
+    font-size: 12px;
+  }
+
+  /* Popup mobile adjustments */
+  /* .popup-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 5vh;
+  } */
+  
+  /* .popup {
+    max-height: 85vh;
+    width: 100%;
+    margin: 0;
+  } */
+  
+  /* .popup-header {
+    padding: 12px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .popup-body {
+    padding: 15px;
+  } */
+  
+  /* .add-transaction-type {
+    flex-direction: column;
+  }
+  
+  .transaction-type-btn {
+    min-width: auto;
+    padding: 12px 15px;
+  }
+  
+  .input-group-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .input-group {
+    min-width: auto;
+  } */
+  
+  /* .calculator-display > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .calculator {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  
+  .calculator button {
+    height: 45px;
+    font-size: 16px;
+  } */
+
+  /* Sign-in mobile */
+  .signin-container {
+    width: 90%;
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .content p {
+    font-size: 1.2em;
+  }
+  
+  .phone-screen .app-illustration img {
+    max-width: 200px;
+  }
+  
+  .dashboard-header {
+    padding: 8px;
+  }
+  
+  /* .header-totals {
+    flex-direction: column;
+    gap: 10px;
+  } */
+  
+  .total-item {
+    padding: 5px;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  th, td {
+    padding: 6px 3px;
+    font-size: 12px;
+  }
+  
+  .transaction-date {
+    font-size: 14px;
+  }
+  
+  .add-transaction-btn, .add-budget-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* .calculator {
+    gap: 5px;
+  }
+  
+  .calculator button {
+    height: 40px;
+    font-size: 14px;
+  } */
+}

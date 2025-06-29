@@ -1,0 +1,9 @@
+{
+    "incomeCategories": ["Rental", "Salary", "Extra Income"],
+    "expenseCategories": [
+      "Baby", "Beauty", "Bills", "Car", "Clothing", "Education", "Electronics",
+      "Entertainment", "Food", "Grocery", "Health", "Home", "Insurance", "Internet",
+      "Shoes", "Shopping", "Sport", "Tax", "Telephone", "Transportation"
+    ]
+  }
+  

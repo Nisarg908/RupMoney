@@ -1,0 +1,38 @@
+{
+    "links": [
+        {
+            "href": "/records",
+            "iconClass": "/images/icon-records.svg",
+            "text": "Records",
+            "isActive": true
+        },
+        {
+            "href": "/analysis",
+            "iconClass": "/images/icon-analysis.svg",
+            "text": "Analysis",
+            "isActive": false
+        },
+        {
+            "href": "/budgets",
+            "iconClass": "/images/icon-budgets.svg",
+            "text": "Budgets",
+            "isActive": false
+        },
+        {
+            "href": "/accounts",
+            "iconClass": "/images/icon-accounts.svg",
+            "text": "Accounts",
+            "isActive": false
+        },
+        {
+            "href": "/categories",
+            "iconClass": "/images/icon-categories.svg",
+            "text": "Categories",
+            "isActive": false
+        }
+    ],
+    "footer": {
+        "logoSrc": "/images/logo.png",
+        "text": "HisaabKitab"
+    }
+}
